@@ -10,7 +10,6 @@ CREATE TABLE [dbo].[tblConta] (
 
 go
 
-
 CREATE TABLE [dbo].[tblTransferencia] (
     [IdTransferencia]   INT         IDENTITY (1, 1) NOT NULL PRIMARY KEY,
     [ContaOrigem]       INT          NOT NULL,
@@ -21,7 +20,9 @@ CREATE TABLE [dbo].[tblTransferencia] (
     [User]              VARCHAR (50) NOT NULL
 );
 go
-
+insert into tblConta (NumeroConta,Saldo)values('233349499',453.20)
+insert into tblConta (NumeroConta,Saldo)values('889988',653.20)
+go
 
 ALTER TABLE [dbo].[tblTransferencia]
 ADD CONSTRAINT FK_ContaOrigem FOREIGN KEY (ContaOrigem)
